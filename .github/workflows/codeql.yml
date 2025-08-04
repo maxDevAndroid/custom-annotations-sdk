@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main, develop ]
   schedule:
-    - cron: '0 2 * * 1'  # Runs every Monday at 2:00 UTC
+    - cron: '0 2 * * 1'  # Segunda-feira 02:00 UTC
 
 jobs:
   analyze:
@@ -20,7 +20,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'java' ]  # Kotlin is analyzed via the Java engine
+        language: [ 'java' ]  # Kotlin é analisado pelo engine Java
 
     steps:
     - name: Checkout repository
@@ -30,7 +30,7 @@ jobs:
       uses: github/codeql-action/init@v3
       with:
         languages: ${{ matrix.language }}
-        config-file: ./.github/codeql/codeql-config.yml # optional
+        # config-file removido pois não existe
 
     - name: Build project
       run: |
