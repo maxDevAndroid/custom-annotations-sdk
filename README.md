@@ -1,4 +1,4 @@
-# TrivisionTech Kotlin Annotations
+# Kotlin Annotations
 
 Set of utility annotations for modularizing status, tracing, security, debugging, and API evolution markup.
 
